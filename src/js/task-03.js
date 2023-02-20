@@ -14,8 +14,10 @@ const images = [
 ];
 
 const galleryRef = document.querySelector('.gallery');
-console.log(galleryRef);
-console.log('nhjkjkj');
+// console.log(galleryRef);
+const galleryLiRef = images.map(image => `<li class="gallery-item"><img class="gallery-img" src="${image.url}" alt="${image.alt}"></li>`).join("");
+// console.log(galleryLiRef);
+galleryRef.insertAdjacentHTML("beforeend", galleryLiRef);
 
 
 // const linksRef = ingredients.map(el => {
