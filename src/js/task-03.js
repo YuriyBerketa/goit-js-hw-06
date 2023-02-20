@@ -13,8 +13,9 @@ const images = [
   },
 ];
 
-const galleryRef = document.querySelector(.gallery);
+const galleryRef = document.querySelector('.gallery');
 console.log(galleryRef);
+console.log('nhjkjkj');
 
 
 // const linksRef = ingredients.map(el => {
