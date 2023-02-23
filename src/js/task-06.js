@@ -1,13 +1,10 @@
 const inputRef = document.querySelector('#validation-input');
-// console.log(inputRef);
-inputRef.classList = 'validation-input';
-// console.log(inputRef);
-const maxLength = inputRef.dataset.length;
-// console.log(maxLength);
 
+inputRef.classList = 'validation-input';
+
+const maxLength = inputRef.dataset.length;
 
 inputRef.addEventListener('blur', onInputValid);
-
 
 function onInputValid(event) {
     // if (event.currentTarget.value.length > maxLength) {
