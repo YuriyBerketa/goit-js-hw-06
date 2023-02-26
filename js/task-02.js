@@ -7,43 +7,13 @@ const ingredients = [
   'Condiments',
 ];
 
-// const ingRef = document.querySelector('ul');
-// console.log(ingRef);
+const ingredientsRef = document.querySelector('#ingredients');
 
-// // const one = ingRef.createElement('li');
+const createLi = (element) => {
+  const itemRef = document.createElement('li');
+  itemRef.classList.add('item');
+  itemRef.textContent = element;
+  return itemRef;
+}
 
-
-// const liRef = document.createElement('li');
-// liRef.classList.add('item');
-// // liRef.createElement('p');
-
-// console.log(liRef);
-// const paragRef = document.createElement('p');
-// paragRef.textContent = "Potatoes";
-// // console.log(paragRef);
-
-// const addP = liRef.append(paragRef);
-
-// conts addUl = ingRef.append(addP);
-
-// console.log(ingRef);
-
-// const liRef = document.createElement('li');
-// liRef.classList.add('item');
-// liRef.textContent = 'Potatoes';
-// // console.log(liRef);
-
-// const ulRef = document.querySelector('ul');
-// ulRef.append(liRef);
-
-const linksRef = ingredients.map(el => {
-const liRef = document.createElement('li');
-liRef.classList.add('item');
-liRef.textContent = el;
-liRef.style.listStyleType = "none";
-  
-const ulRef = document.querySelector('ul');
-ulRef.append(liRef);
-  
-  return liRef;
-})
+ingredientsRef.append(...ingredients.map(createLi));
